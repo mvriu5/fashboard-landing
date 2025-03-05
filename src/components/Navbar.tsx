@@ -90,7 +90,7 @@ function Navbar() {
                             animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
                             transition={{duration: 0.65}}
                 >
-                    <p className={cn("font-bold text-neutral-800 text-xl ml-2")}>fashboard</p>
+                    <p className={cn("font-bold text-neutral-800 text-xl ml-2", darkBackground && "text-gray-100")}>fashboard</p>
                 </motion.div>
 
                 <div className={"relative flex flex-row items-center pl-4"}
