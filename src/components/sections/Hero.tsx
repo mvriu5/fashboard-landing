@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function Hero() {
     return (
-        <div className={"flex px-90 pb-32 gap-8"}>
+        <div className={"flex px-72 pb-32 gap-8"}>
             <div className={"flex flex-col gap-8 w-3/5"}>
                 <p className={"font-bold text-6xl text-gray-900"}>Lorem ipsum dolor sit</p>
                 <p className={"text-xl text-gray-900"}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>

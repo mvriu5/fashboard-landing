@@ -1,7 +1,7 @@
 
 function Quote() {
     return (
-        <div className={"px-96 py-32 flex flex-col gap-6 text-4xl leading-relaxed font-semibold text-gray-800"}>
+        <div className={"px-72 py-32 flex flex-col gap-6 text-4xl leading-relaxed font-semibold text-gray-800"}>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. </p>
             <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
