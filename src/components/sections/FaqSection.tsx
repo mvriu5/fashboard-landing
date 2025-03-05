@@ -2,8 +2,8 @@ import {Accordion, AccordionContent, AccordionItem } from "../Accordion"
 
 function FaqSection() {
     return (
-        <div className={"px-90 pt-32 pb-80 w-screen flex items-center justify-center"}>
-            <Accordion type="single" collapsible className="w-5/6">
+        <div className={"px-56 pt-32 pb-80 w-screen flex items-center justify-center"}>
+            <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" title={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr"}>
                     <AccordionContent>
                         At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.

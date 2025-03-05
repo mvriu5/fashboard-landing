@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import type React from "react"
 import {useEffect, useRef, useState} from "react"
 import {cn} from "@/utils/cn"
+import {Smartphone} from "lucide-react"
 
 type NavItem = {
     title: string
@@ -31,8 +32,6 @@ function Navbar() {
         {title: "About", href: ""}
     ]
 
-
-
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 5)
@@ -49,11 +48,11 @@ function Navbar() {
                 return
             }
 
-            const headerBottom = header.getBoundingClientRect().bottom;
-            const layerTop = layer.getBoundingClientRect().top;
-            const layerBottom = layer.getBoundingClientRect().bottom;
+            const headerBottom = header.getBoundingClientRect().bottom
+            const layerTop = layer.getBoundingClientRect().top
+            const layerBottom = layer.getBoundingClientRect().bottom
 
-            setDarkBackground(layerTop <= headerBottom && layerBottom >= headerBottom);
+            setDarkBackground(layerTop <= headerBottom && layerBottom >= headerBottom)
         }
 
         return () => window.removeEventListener("scroll", handleScroll)
@@ -68,7 +67,7 @@ function Navbar() {
         <div className={"fixed z-50 w-full overflow-hidden"} id={"header"}>
             <motion.div
                 className={cn(
-                    "my-4 p-1.5 flex flex-row items-center justify-between top-0 left-0 rounded-md border border-gray-300 shadow-sm",
+                    "my-4 p-1.5 flex flex-row items-center justify-between top-0 left-0 rounded-lg border border-gray-300 shadow-sm",
                     "bg-gray-100/50 backdrop-blur-xl overflow-hidden",
                     darkBackground && "bg-neutral-700/40 border-neutral-700 text-gray-300"
                 )}
@@ -91,7 +90,7 @@ function Navbar() {
                             animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
                             transition={{duration: 0.65}}
                 >
-                    <p className={cn("font-bold text-xl ml-2")}>fashboard</p>
+                    <p className={cn("font-bold text-neutral-800 text-xl ml-2")}>fashboard</p>
                 </motion.div>
 
                 <div className={"relative flex flex-row items-center pl-4"}
@@ -109,11 +108,12 @@ function Navbar() {
                     <Cursor position={position} darkBackground={darkBackground}/>
                 </div>
                 <div className={cn(
-                        "px-4 py-1 rounded-md hover:bg-gray-300/70 cursor-pointer font-semibold",
-                        darkBackground && "hover:bg-neutral-900/50"
+                        "flex items-center gap-2.5 px-4 py-1 rounded-lg bg-neutral-800 text-gray-100 hover:bg-neutral-700 cursor-pointer font-semibold",
+                        darkBackground && "bg-gray-100 text-gray-800 hover:bg-gray-200"
                     )}
                 >
-                    Get the App
+                    Get the app
+                    <Smartphone size={18} strokeWidth={2.5}/>
                 </div>
             </motion.div>
         </div>
@@ -126,7 +126,7 @@ const Tab: React.FC<TabProps> = ({ setPosition, onClick, title }) => {
 
     return (
         <motion.div
-            className={cn("relative z-50 px-4 py-1 font-medium text-md rounded-md cursor-pointer")}
+            className={cn("relative z-50 px-4 py-1 font-medium text-md rounded-lg cursor-pointer")}
             ref={ref}
             onClick={onClick}
             initial={{opacity: 0, filter: 'blur(10px)', y: -30}}
@@ -153,7 +153,7 @@ const Cursor: React.FC<{ position: {left: number, width: number, opacity: number
     return (
         <motion.div
             animate={{...position}}
-            className={cn("absolute z-40 h-8 rounded-md bg-gray-300/70", darkBackground  && "bg-neutral-900/50")}
+            className={cn("absolute z-40 h-8 rounded-lg bg-gray-300/70", darkBackground  && "bg-neutral-900/50")}
         />
     )
 }

@@ -26,13 +26,13 @@ const AccordionItem = React.forwardRef<React.ComponentRef<typeof AccordionPrimit
                     className="flex px-4 rounded-t-md data-[state=open]:text-gray-800 data-[state=open]:bg-gray-300/40">
                     <AccordionPrimitive.Trigger
                         className={cn(
-                            "flex flex-1 gap-8 items-center justify-between py-4 font-medium transition-all text-2xl",
+                            "flex flex-1 gap-8 items-center justify-between py-4 font-semibold transition-all text-4xl",
                             "[&[data-state=open]>svg]:rotate-180 text-left",
                             className
                         )}
                     >
                         {title}
-                        <ChevronDown className="h-6 w-6 shrink-0 transition-transform duration-200"/>
+                        <ChevronDown className="h-6 w-6 shrink-0 transition-transform duration-500"/>
                     </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 {children}
@@ -47,7 +47,7 @@ const AccordionContent = React.forwardRef<React.ComponentRef<typeof AccordionPri
     return (
         <AccordionPrimitive.Content
             className={cn(
-                "overflow-hidden text-xl data-[state=open]:bg-gray-300/40 px-4 rounded-b-md",
+                "overflow-hidden text-2xl data-[state=open]:bg-gray-300/40 px-4 rounded-b-md font-semibold",
                 "transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
             )}
             ref={ref}
